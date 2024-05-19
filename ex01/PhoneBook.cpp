@@ -6,37 +6,60 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 17:59:32 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/19 18:33:36 by hiono            ###   ########.fr       */
+/*   Updated: 2024/05/19 20:12:17 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class PhoneBook
+#include "./PhoneBook.hpp"
+#include "./Contact.hpp"
+
+PhoneBook::PhoneBook()
 {
-	public:
-		void	Add(char *fn, char *ln, char *nn, char *pn, char *ds)
-		{
-			// validate input
-			if (!*fn | !*ln, !*nn, !*pn, !*ds)
-			{
-				std::cout << "fill all the fields of contact" << std::endl;
-				return ;
-			}
-			// create instance
-			contacts[index] = Contact::Contact(fn, ln, nn, pn, ds);
-			// add index
-			index = (index + 1) % 8;
-		};
+	contacts = (Contact *)malloc(sizeof(std::string) * 8);
+	index = 0;
+}
 
-		Search(int index)
-		{
-			Contact::Contact contact;
-			contact = contacts[index];
-			display_header();
-			// display each element
-			contact.
-		};
+void	PhoneBook::Add(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds)
+{
+	if (fn.empty() | ln.empty() | nn.empty() | pn.empty() | ds.empty())
+	{
+		std::cout << "fill all the fields of contact" << std::endl;
+		return ;
+	}
+	contacts[index] = Contact(fn, ln, nn, pn, ds);
+	index = (index + 1) % 8;
+}
 
-	private:
-		Contact::Contact	*contacts[8];
-		int					index = 0;
+void	PhoneBook::Search(int index)
+{
+	//Contact::Contact contact;
+	(void)index;
+	PrintContacts();
+}
+
+void	PhoneBook::PrintHeader()
+{
+	std::cout << std::setw(10);
+	std::cout << "index" << "|";
+	std::cout << "first name" << "|";
+	std::cout << "last name" << "|";
+	std::cout << "nickname";
+	std::cout << std::endl;
+}
+
+void	PhoneBook::PrintContacts()
+{
+	int	i;
+	
+	i = 0;
+	while (!contacts[i])
+	{
+		std::cout << std::setw(10);
+		std::cout << i << "|";
+		std::cout << contacts[i].getFirstName() << "|";
+		std::cout << contacts[i].getLastName() << "|";
+		std::cout << contacts[i].getNickName();
+		std::cout << std::endl;
+		i++;
+	}
 }
