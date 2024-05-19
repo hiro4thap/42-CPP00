@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/18 15:21:19 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/19 18:41:00 by hiono            ###   ########.fr       */
+/*   Created: 2024/05/19 18:03:18 by hiono             #+#    #+#             */
+/*   Updated: 2024/05/19 18:31:11 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstring>
-#include <cstdio>
-
-void	putstr(std::string str)
+class Contact
 {
-	size_t	i;
+	public:
+		Contact(char *fn, char *ln, char *nn, char *pn, char *ds)
+		{
+			first_name = fn;
+			last_name = ln;
+			nickname = nn;
+			phone_number = pn;
+			darkest_secret = ds;
+		};
 
-	i = 0;
-    while (i < str.length())
-	{
-        putchar(toupper(str[i]));
-		i++;
-	}
-}
-
-int main(int argc, char *argv[])
-{
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	for (int i = 1; i < argc; i++)
-		putstr(argv[i]);
-	std::cout << std::endl;
-    return 0;
+	private:
+		char	*first_name;
+		char	*last_name;
+		char	*nickname;
+		char	*phone_number;
+		char	*darkest_secret;
 }
