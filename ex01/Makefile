@@ -1,4 +1,4 @@
-NAME	= megaphone
+NAME	= phonebook
 
 COMPILE	= c++
 CFLAGS	= -Wall -Wextra -Werror
@@ -6,7 +6,7 @@ CFLAGS	= -Wall -Wextra -Werror
 SRC_DIR = ./
 OBJ_DIR = obj/
 
-SRC		= megaphone.cpp
+SRC		= main.cpp PhoneBook.cpp Contact.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 SRCS	= $(addprefix $(SRC_DIR), $(SRC))

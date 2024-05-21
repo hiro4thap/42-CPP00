@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 19:35:37 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/19 20:11:23 by hiono            ###   ########.fr       */
+/*   Updated: 2024/05/21 16:55:17 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,15 @@ class PhoneBook
 {
 	public:
 		PhoneBook();
-		void	Add(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds);
-		void	Search(int index);
+		void	Add();
+		void	Search();
+		void	Exit();
 
 	private:
-		Contact	*contacts;
-		int		index;
+		Contact	contacts_[8];
+		int		index_;
 		void	PrintHeader();
+		void	PrintContact(int index);
 		void	PrintContacts();
 };
 
