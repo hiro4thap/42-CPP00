@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 19:35:37 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/24 17:37:31 by hiono            ###   ########.fr       */
+/*   Updated: 2024/05/25 14:21:59 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class PhoneBook
 {
 	public:
 		PhoneBook();
+		~PhoneBook();
 		void	Add();
 		void	Search();
 

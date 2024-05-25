@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 17:59:32 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/24 17:58:04 by hiono            ###   ########.fr       */
+/*   Updated: 2024/05/25 15:36:13 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ PhoneBook::PhoneBook()
 {
 	current_index_ = 0;
 	max_index_ = -1;
+}
+
+PhoneBook::~PhoneBook()
+{
 }
 
 void	PhoneBook::Add()
@@ -70,7 +74,7 @@ void	PhoneBook::Add()
 	current_index_ = (current_index_ + 1) % 8;
 	if (max_index_ < 7)
 		max_index_++;
-	std::cout << "A NEW CONTACT IS ADDED" << std::endl << std::endl;
+	std::cout << " A NEW CONTACT IS ADDED" << std::endl << std::endl;
 }
 
 void	PhoneBook::Search()
