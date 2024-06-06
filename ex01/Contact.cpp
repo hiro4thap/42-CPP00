@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 18:03:18 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/25 15:35:17 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/06 16:52:56 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,16 @@ std::string	Contact::getLastName()
 std::string	Contact::getNickName()
 {
 	return nickname_;
+}
+
+std::string	Contact::getPhoneNumber()
+{
+	return phone_number_;
+}
+
+std::string	Contact::getDarkestSecret()
+{
+	return darkest_secret_;
 }
 
 void	Contact::setFirstName(std::string fn)
