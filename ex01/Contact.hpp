@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 19:38:23 by hiono             #+#    #+#             */
-/*   Updated: 2024/05/20 17:01:39 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:51:44 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Contact
 		std::string	getFirstName();
 		std::string	getLastName();
 		std::string	getNickName();
+		std::string	getPhoneNumber();
+		std::string	getDarkestSecret();
 		void	setFirstName(std::string fn);
 		void	setLastName(std::string ln);
 		void	setNickName(std::string nn);

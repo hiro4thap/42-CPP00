@@ -6,7 +6,7 @@
 /*   By: vboxuser <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 14:16:08 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/05/25 15:31:51 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/06 17:03:40 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	PrintInstruction(void)
 {
 	std::cout << "Operation List" << std::endl;
 	std::cout << " - ADD    : add a contact to phonebook" << std::endl;
-	std::cout << " - SEARCH : display and search contact" << std::endl;
+	std::cout << " - SEARCH : search contact from phonebook" << std::endl;
 	std::cout << " - EXIT   : exit program" << std::endl << std::endl;
 }
 
