@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 12:28:54 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/06 15:46:44 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/07 15:58:52 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 		_amount -= withdrawal;
 		_nbWithdrawals++;
 		_totalAmount -= withdrawal;
-		_totalNbWithdrawals--;
+		_totalNbWithdrawals++;
 
 		_displayTimestamp();
 		std::cout << " ";
