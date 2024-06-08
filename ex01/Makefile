@@ -5,20 +5,23 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 SRC_DIR 	= ./
 OBJ_DIR 	= obj/
+INC_DIR 	= ./
 
 SRC			= main.cpp PhoneBook.cpp Contact.cpp
 OBJ			= $(SRC:.cpp=.o)
+INC			= PhoneBook.hpp Contact.hpp
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC))
 OBJS		= $(addprefix $(OBJ_DIR), $(OBJ))
+INCS		= $(addprefix $(OBJ_DIR), $(INC))
 
 all:$(NAME)
 
-$(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
+$(OBJ_DIR)%.o:$(SRC_DIR)%.cpp $(INCS)
 	mkdir -p $(OBJ_DIR)
 	$(COMPILE) $(CFLAGS) -o $@ -c $<
 
-$(NAME):$(OBJS)
+$(NAME):$(OBJS) $(INCS)
 	$(COMPILE) $(CFLAGS) -o $@ $(OBJS)
 
 clean:
