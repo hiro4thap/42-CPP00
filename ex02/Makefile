@@ -13,7 +13,7 @@ INC			= Account.hpp
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC))
 OBJS		= $(addprefix $(OBJ_DIR), $(OBJ))
-INCS		= $(addprefix $(OBJ_DIR), $(INC))
+INCS		= $(addprefix $(INC_DIR), $(INC))
 
 all:$(NAME)
 
